@@ -45,9 +45,7 @@ namespace Business.Concrete
                 return new ErrorResult(Messages.CarUpdateInvalid);
             }
             _carDal.Update(car);
-            
-               
-            
+
             return new SuccessResult(Messages.CarUpdate);
         }
         public IResult Delete(Car car)

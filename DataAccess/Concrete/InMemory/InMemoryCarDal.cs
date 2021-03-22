@@ -43,6 +43,7 @@ namespace DataAccess.Concrete.InMemory
         {
             return _cars;
         }
+      
 
         public List<Car> GetAll(Expression<Func<Car, bool>> filter = null)
         {

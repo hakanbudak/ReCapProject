@@ -13,8 +13,44 @@ namespace Business.Constants
         public static string CarUpdate = "Araç güncellendi";
         public static string CarUpdateInvalid = "Araba eklenemedi. Kayıt koşulları; \n" +
                     "-Araba açıklaması en az iki karakter içermelidir.";
-        public static string CarDelete = "Araç silindi";
-        public static string MaintenanceTime = "Bakımda";
         public static string CarListed = "Araçlar listelendi";
+        public static string CarDelete = "Araç silindi";
+
+        public static string RentalAdded = "Kiralama bilgisi eklendi";
+        public static string RentalDelete = "Kiralama bilgisi silindi";
+        public static string RentalListed = "Kiralama bilgileri listelendi";
+        public static string RentalUpdate = "Kiralama Bilgisi Güncellendi";
+        public static string RentalAddedError = "Araç teslim edilmediği için tekrar kiraya verilemez";
+        public static string RentalUpdateReturnDate = "Araç Teslim Alındı";
+        public static string RentalUpdateReturnDateError = "Araç Teslim Alınmış";
+
+        public static string CustomerAdded = "Müsteri eklendi";
+        public static string CustomerDeleted = "Müsteri silindi";
+        public static string CustomerUpdated = "Müsteri güncellendi";
+        public static string CustomerNameInvalid = "Müsteri ismi geçersiz";
+        public static string CustomersListed = "Müşteriler listelendi";
+
+        public static string ColorAdded = "Renk eklendi";
+        public static string ColorDeleted = "Renk silindi";
+        public static string ColorUpdated = "Renk güncellendi";
+        public static string ColorNameInvalid = "Renk ismi geçersiz";
+        public static string ColorsListed = "Renkler listelendi";
+
+        public static string BrandAdded = "Marka başarıyla veritabanına eklendi.";
+        public static string BrandUpdate = "Marka başarıyla güncellendi.";
+        public static string BrandsListed = "Markalar Listeleniyor...";
+        public static string BrandDeleted = "Marka başarıyla veritabanından silindi.";
+
+        public static string UserAdded = "Kullanıcı Eklendi";
+        public static string FirstNameLastNameInvalid = "İsim veya Soyisim Girilmemiş";
+        public static string UserDeleted = "Kullanıcı Silindi";
+        public static string UserNotDeleted = "HATA. Kullanıcı Silinemedi";
+        public static string UserUpdated = "Kullanıcı Güncellendi";
+        public static string UsersListed = "Kullanıcılar Listeleniyor...";
+
+
+
+        public static string MaintenanceTime = "Bakımda";
+
     }
 }
