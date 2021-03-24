@@ -20,7 +20,7 @@ namespace Business.Concrete
         }
         public IDataResult<List<Car>> GetAll()
         {
-            if (DateTime.Now.Hour==23)
+            if (DateTime.Now.Hour== 21)
             {
                 return new ErrorDataResult<List<Car>>(Messages.MaintenanceTime);
             }
@@ -30,8 +30,8 @@ namespace Business.Concrete
         {
             if (car.DailyPrice > 0 && car.Description.Length > 2)
             {
-                 //magic strings
-                 return new ErrorResult(Messages.CarAddedInvalid); 
+                //magic strings
+                return new ErrorResult(Messages.CarAddedInvalid);
             }
            _carDal.Add(car);
             
