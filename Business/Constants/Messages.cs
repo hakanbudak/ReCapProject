@@ -36,6 +36,7 @@ namespace Business.Constants
         public static string ColorNameInvalid = "Renk ismi geçersiz";
         public static string ColorsListed = "Renkler listelendi";
 
+        public static string BrandNameInvalid = "Marka ismi geçersiz";
         public static string BrandAdded = "Marka başarıyla veritabanına eklendi.";
         public static string BrandUpdate = "Marka başarıyla güncellendi.";
         public static string BrandsListed = "Markalar Listeleniyor...";

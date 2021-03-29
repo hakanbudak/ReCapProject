@@ -1,5 +1,8 @@
 ﻿using Business.Abstract;
 using Business.Constants;
+using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Validation;
+using Core.CrossCuttingConcerns.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -61,16 +64,11 @@ namespace Business.Concrete
             _rentalDal.Update(rental);
             return new SuccessResult(Messages.RentalUpdate);
         }
-
+        [ValidationAspect(typeof(RentalValidator))]
         public IResult UpdateRetunrDate(Rental rental)
         {
             var result = _rentalDal.GetAll(r => r.Id == rental.Id);
             var updateRental = result.LastOrDefault();
-
-            if (updateRental.ReturnDate != null)
-            {
-                return new ErrorResult(Messages.RentalUpdateReturnDateError);
-            }
 
             updateRental.ReturnDate = rental.ReturnDate;
             _rentalDal.Update(updateRental);

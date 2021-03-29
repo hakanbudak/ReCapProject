@@ -1,5 +1,8 @@
 ﻿using Business.Abstract;
 using Business.Constants;
+using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Validation;
+using Core.CrossCuttingConcerns.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -17,13 +20,9 @@ namespace Business.Concrete
         {
             _colorDal = colorDal;
         }
-
+        [ValidationAspect(typeof(ColorValidator))]
         public IResult Add(Color color)
         {
-            if (color.ColorName.Length>2)
-            {
-                return new ErrorResult(Messages.ColorNameInvalid);
-            }
             _colorDal.Add(color);
             return new SuccessResult(Messages.ColorAdded);
         }
@@ -38,13 +37,9 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<Color>>(_colorDal.GetAll(),Messages.ColorsListed);
         }
-
+        [ValidationAspect(typeof(ColorValidator))]
         public IResult Update(Color color)
         {
-            if (color.ColorName.Length>2)
-            {
-                return new ErrorResult(Messages.ColorNameInvalid);
-            }
             _colorDal.Update(color);
             return new SuccessResult(Messages.ColorUpdated);
         }
