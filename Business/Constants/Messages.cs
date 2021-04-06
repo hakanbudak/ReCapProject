@@ -52,6 +52,10 @@ namespace Business.Constants
 
 
         public static string MaintenanceTime = "Bakımda";
-
+        public static string CarImagesAdded="Araba görseli eklendi";
+        public static string CarImagesDeleted= "Araba görseli silindi";
+        public static string CarImagesUpdate = "Araba görseli güncellendi";
+        public static string CarImagesListed = "Araba görseli listelendi";
+        public static string CarCheckImageLimited="";
     }
 }
