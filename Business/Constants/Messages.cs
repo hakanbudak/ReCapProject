@@ -49,7 +49,7 @@ namespace Business.Constants
         public static string UserUpdated = "Kullanıcı Güncellendi";
         public static string UsersListed = "Kullanıcılar Listeleniyor...";
 
-
+        public static string AuthorizationDenied = "Yetkiniz yok ";
 
         public static string MaintenanceTime = "Bakımda";
         public static string CarImagesAdded="Araba görseli eklendi";
@@ -57,5 +57,13 @@ namespace Business.Constants
         public static string CarImagesUpdate = "Araba görseli güncellendi";
         public static string CarImagesListed = "Araba görseli listelendi";
         public static string CarCheckImageLimited="";
+
+        public static string UserRegistered = "Kayıt oldu";
+        public static string UserNotFound = "Kullanıcı bulunamadı";
+        public static string PasswordError = "Parola hatası";
+        public static string SuccessfulLogin = "Başarılı giriş";
+        public static string UserAlreadyExists = "Kullanıcı mevcut";
+        public static string AccessTokenCreated = "Token oluşturuldu";
+
     }
 }

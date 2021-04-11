@@ -136,23 +136,23 @@ namespace ConsolUI
             }
         }
 
-        private static void UserAdd(UserManager userManager)
-        {
-            var result1 = userManager.GetAll();
+        //private static void UserAdd(UserManager userManager)
+        //{
+        //    var result1 = userManager.GetAll();
 
-            if (result1.Success == true)
-            {
-                foreach (var user in result1.Data)
-                {
-                    Console.WriteLine("FisrtName : " + " / " + user.FirstName + " / " + "LastName : " + user.LastName + " / " + "Email : " + " / " + user.Email);
-                }
+        //    if (result1.Success == true)
+        //    {
+        //        foreach (var user in result1.Data)
+        //        {
+        //            Console.WriteLine("FisrtName : " + " / " + user.FirstName + " / " + "LastName : " + user.LastName + " / " + "Email : " + " / " + user.Email);
+        //        }
 
-            }
-            else
-            {
-                Console.WriteLine(result1.Message);
-            }
-        }
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine(result1.Message);
+        //    }
+        //}
 
         private static void CarDetails(CarManager carManager)
         {
