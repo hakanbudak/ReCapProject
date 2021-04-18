@@ -1,6 +1,7 @@
 ﻿using Business.Abstract;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Caching;
 using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Validation;
 using Core.Utilities.Results;
@@ -48,7 +49,7 @@ namespace Business.Concrete
             _rentalDal.Delete(rental);
             return new ErrorResult(Messages.RentalDelete);
         }
-
+        [CacheAspect]
         public IDataResult<List<Rental>> GetAll()
         {
             return new SuccessDataResult<List<Rental>>(_rentalDal.GetAll(),Messages.RentalListed) ;

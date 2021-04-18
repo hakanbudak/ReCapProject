@@ -1,6 +1,7 @@
 ﻿using Business.Abstract;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Caching;
 using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Validation;
 using Core.Utilities.Results;
@@ -32,7 +33,7 @@ namespace Business.Concrete
             _colorDal.Delete(color);
             return new SuccessResult(Messages.ColorDeleted);
         }
-
+        [CacheAspect]
         public IDataResult<List<Color>> GetAll()
         {
             return new SuccessDataResult<List<Color>>(_colorDal.GetAll(),Messages.ColorsListed);

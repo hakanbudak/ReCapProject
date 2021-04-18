@@ -36,7 +36,7 @@ namespace Business.DependencyResolvers.Autofac
 
             builder.RegisterType<AuthManager>().As<IAuthService>(); //JWT
             builder.RegisterType<JwtHelper>().As<ITokenHelper>();
-            builder.RegisterType<HttpContextAccessor>().As<IHttpContextAccessor>();
+            
 
             builder.RegisterType<CarImagesManager>().As<ICarImagesService>(); builder.RegisterType<EfCarImagesDal>().As<ICarImageDal>();
 
